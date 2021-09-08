@@ -1,7 +1,9 @@
 # Cap-Project-Tusken-Raiders
 
-We are the Team Raiders and We consist of Chad Wilson, Harris Chaudhary, Conner Mayfield.
+We are the Tusken Raiders and we consist of Chad Wilson, Harris Chaudhary, and Conner Mayfield.
 
-We will be creating a project that will allow the client to add projects into the reposiory, add users, add time spent on the project, add what they did to the project.
+Sponsor - Hollie (Humana)
 
-This will be a tracking system to allow the users and the managers to see how long they have spent on their individual projects and see how those projects have changed over the time of them starting and finishing the project.
+We will be creating a project for the Indiana University Capstone course (CSCI - P445)
+
+This will be a project management system to allow the users and their managers to see how long they have spent on their individual projects, see how those projects have changed over the time, etc. 
