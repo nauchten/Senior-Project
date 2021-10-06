@@ -1,0 +1,9 @@
+Notes for meeting on 10/5/2021
+start time: 7:30pm endtime: 8:15 pm
+all of these questions are from email on 10/5/2021
+user priority will be high medium low.
+request dt is request date and what time it is entered into the system.
+	could be automated by local time from machine.
+do the second option for due date security, but if time is a issue we will do the 4th one that allows anyone.
+related ID- the ID number for the project but put into this field that will allow it to be shown as close to the same.
+BA/QC will be 2 seperate fields. BA are business analysist. QC Quality control and time tested.
