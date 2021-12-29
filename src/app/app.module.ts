@@ -4,7 +4,6 @@ import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashbo
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
 import {RouterModule} from "@angular/router";
-import { HomeComponent } from './home/home.component';
 import { AdminDashboard2Component } from './admin-dashboard2/admin-dashboard2.component';
 import {NgSelectModule} from "@ng-select/ng-select";
 import { RegisterComponent } from './register/register.component';
@@ -15,6 +14,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import { AuthService } from './auth.service';
+import {EventService} from "./event.service";
 
 
 @NgModule({
@@ -22,7 +22,6 @@ import { AuthService } from './auth.service';
     AppComponent,
     EmployeeDashboardComponent,
     AdminDashboardComponent,
-    HomeComponent,
     AdminDashboard2Component,
     RegisterComponent,
     EventsComponent,
@@ -42,7 +41,7 @@ import { AuthService } from './auth.service';
 
 
   ],
-  providers: [AuthService],
+  providers: [AuthService, EventService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,8 +1,10 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
 
 const PORT = 3000   // This is the port our express server will run on
 const app = express()
+app.use(cors())
 const api = require('./routes/api')
 //app.use(bodyParser.json())
 //app.use('/api', api)

@@ -23,23 +23,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8387522e-6676-40d5-b943-22d0a64c1ea2" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/common/http/http.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/common/http/http.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/common/http/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/@angular/common/http/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/compiler/bundles/compiler.umd.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/compiler/fesm2015/compiler.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/core/__ivy_ngcc__/fesm2015/core.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/core/bundles/core.umd.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/@angular/core/fesm2015/core.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/esbuild-wasm/esbuild.wasm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/home/home.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/home.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/home/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,6 +128,7 @@
       <workItem from="1640553483316" duration="1467000" />
       <workItem from="1640733938703" duration="52000" />
       <workItem from="1640734043223" duration="108000" />
+      <workItem from="1640735992167" duration="4598000" />
     </task>
     <servers />
   </component>
@@ -176,9 +176,9 @@
       <screen x="0" y="23" width="1440" height="806" />
     </state>
     <state width="1305" height="206" key="GridCell.Tab.0.right/0.23.1440.806@0.23.1440.806" timestamp="1632811363607" />
-    <state x="362" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1640477487399">
+    <state x="362" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1640755186648">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="362" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1640477487399" />
+    <state x="362" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1640755186648" />
   </component>
 </project>
