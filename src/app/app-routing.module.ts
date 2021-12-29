@@ -5,6 +5,10 @@ import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.compone
 import {EmployeeDashboardComponent} from './employee-dashboard/employee-dashboard.component';
 import {HomeComponent} from './home/home.component';
 import {AdminDashboard2Component} from "./admin-dashboard2/admin-dashboard2.component";
+import {EventsComponent} from "./events/events.component";
+import {SpecialEventsComponent} from "./special-events/special-events.component";
+import {RegisterComponent} from "./register/register.component";
+import {LoginComponent} from "./login/login.component";
 
 const routes: Routes = [
 
@@ -23,7 +27,24 @@ const routes: Routes = [
   {
     path: 'admin-dashboard2',
     component: AdminDashboard2Component
+  },
+  {
+    path: 'events',
+    component: EventsComponent
+  },
+  {
+    path: 'special-events',
+    component: SpecialEventsComponent
+  },
+  {
+    path: 'register',
+    component: RegisterComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   }
+
 ];
 
 

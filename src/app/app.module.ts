@@ -1,7 +1,5 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppComponent } from './app.component';
+import { NgModule } from '@angular/core';
 import { EmployeeDashboardComponent } from './employee-dashboard/employee-dashboard.component';
 import {AdminDashboardComponent} from './admin-dashboard/admin-dashboard.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,7 +7,15 @@ import {RouterModule} from "@angular/router";
 import { HomeComponent } from './home/home.component';
 import { AdminDashboard2Component } from './admin-dashboard2/admin-dashboard2.component';
 import {NgSelectModule} from "@ng-select/ng-select";
-import {FormsModule} from "@angular/forms";
+import { RegisterComponent } from './register/register.component';
+import { EventsComponent } from './events/events.component';
+import { SpecialEventsComponent } from './special-events/special-events.component';
+import { LoginComponent } from './login/login.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { AppComponent } from './app.component';
+import {HttpClientModule} from '@angular/common/http';
+import { AuthService } from './auth.service';
+
 
 @NgModule({
   declarations: [
@@ -17,16 +23,26 @@ import {FormsModule} from "@angular/forms";
     EmployeeDashboardComponent,
     AdminDashboardComponent,
     HomeComponent,
-    AdminDashboard2Component
+    AdminDashboard2Component,
+    RegisterComponent,
+    EventsComponent,
+    SpecialEventsComponent,
+    LoginComponent
   ],
   imports: [
-    BrowserModule,
     AppRoutingModule,
     RouterModule,
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule,
     NgSelectModule,
-    FormsModule
+    HttpClientModule,
+    AuthService
+
+
+
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

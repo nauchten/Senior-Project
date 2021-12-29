@@ -9,7 +9,7 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous"
   />
-  <title>CSS GRID DASHBOARD</title>
+  <title>Humana Project Management Tool</title>
 </head>
 
 <body id="body">
@@ -20,7 +20,14 @@
     </div>
     <div class="navbar__left">
       <a href="employee-dashboard">Department</a>
-      <a class="" href="admin-dashboard2">Priority</a>
+      <div class="dropdown">
+        <button class="dropbtn">Priority</button>
+        <div class="dropdown-content">
+          <a href="dd">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="admin-dashboard2">Link 3</a>
+        </div>
+      </div>
     </div>
     <div class="navbar__right">
 
@@ -38,16 +45,16 @@
 
 
       <!-- MAIN TITLE ENDS HERE -->
-
+      <div>
+        <p>What project did you work on?</p>
+      </div>
       <!-- MAIN CARDS STARTS HERE -->
       <div class="main__cards">
         <div class="card">
+          <p class="text-primary-p">ID</p>
 
-          <div>
-            <p>What project did you work on?</p>
-          </div>
+
           <div class="card_inner">
-            <p class="text-primary-p">ID</p>
             <span class="font-bold text-title"></span>
 
             <select id="list2" onchange="getSelectValue();">
@@ -75,8 +82,9 @@
         </div>
 
         <div class="card">
+          <p>Select new status</p>
           <div>
-            <p>Select new status</p>
+
           </div>
           <div class="card_inner">
             <p class="text-primary-p">Status</p>
@@ -106,8 +114,12 @@
         <div class="card">
 
           <div class="card_inner">
+            <div>
+            <p>New category?</p>
+            </div>
             <p class="text-primary-p">Category</p>
-            <span class="font-bold text-title">3</span>
+
+
 
             <select id="list3" onchange="getSelectValue();">
               <option value="js">JavaScript</option>
@@ -135,11 +147,18 @@
       <!-- CHARTS STARTS HERE -->
       <div class="charts">
         <div class="charts__left">
-          <div class="charts__left__title">
-            <div>
-            </div>
-            <i class="fa fa-usd" aria-hidden="true"></i>
-          </div>
+          <p>What did you do today?</p>
+          <p>&nbsp;&nbsp;</p>
+          <p>Notes:</p>
+          <p>&nbsp;&nbsp;</p>
+          <p>Code Updates:</p>
+          <p>&nbsp;&nbsp;</p>
+          <p>Meeting Notes:</p>
+
+
+
+
+
           <div id="apex1"></div>
         </div>
 
@@ -147,33 +166,26 @@
           <div class="charts__right__title">
             <div>
             </div>
-            <i class="fa fa-usd" aria-hidden="true"></i>
           </div>
 
           <div class="charts__right__cards">
-            <div class="card1">
-              <h1>Income</h1>
-              <p>$75,300</p>
-            </div>
 
-            <div class="card2">
-              <h1>Sales</h1>
-              <p>$124,200</p>
-            </div>
 
-            <div class="card3">
-              <h1>Users</h1>
-              <p>3900</p>
-            </div>
+
+
+
 
             <div class="card4">
-              <h1>Orders</h1>
-              <p>1881</p>
+
+
             </div>
           </div>
         </div>
       </div>
 
+      <div>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+      </div>
       <!-- Save button -->
       <a href="#" class="myButton">Save</a>
 
@@ -186,6 +198,9 @@
       <div class="sidebar__img">
         <img src="assets/HumanaAppLogo.png"/>
         <h1>Humana Project Management Tool</h1>
+
+
+
       </div>
       <i
         onclick="closeSidebar()"
