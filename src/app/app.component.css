@@ -445,8 +445,17 @@ main {
   }
 }
 
+.sidebar__img {
+  display: flex;
+  size: 5px;
+  align-items: center;
+}
+
 @media only screen and (max-width: 480px) {
   .navbar__left {
     display: none;
   }
 }
+
+body { min-height: 100vh; }
+

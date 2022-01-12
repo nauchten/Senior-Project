@@ -12,9 +12,11 @@ import { SpecialEventsComponent } from './special-events/special-events.componen
 import { LoginComponent } from './login/login.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AuthService } from './auth.service';
 import {EventService} from "./event.service";
+import {AuthGuard} from "./auth.guard";
+import {TokenInterceptorService} from "./token-interceptor.service";
 
 
 @NgModule({
@@ -36,12 +38,16 @@ import {EventService} from "./event.service";
     ReactiveFormsModule,
     NgSelectModule,
     HttpClientModule,
-    AuthService
+    AuthService,
 
 
 
   ],
-  providers: [AuthService, EventService],
+  providers: [AuthService, AuthGuard, EventService, {
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptorService,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

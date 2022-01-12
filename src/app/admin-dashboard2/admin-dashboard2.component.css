@@ -329,8 +329,9 @@ main {
 }
 
 .sidebar__img {
-  display: flex;
-  align-items: center;
+  position:fixed;
+  top:0;
+  left:0;
 }
 
 .sidebar__title > div > img {
@@ -509,6 +510,7 @@ main {
   text-decoration:none;
   text-shadow:0px 1px 0px #2f6627;
 }
+
 .myButton:hover {
   background-color:#5cbf2a;
 }
@@ -516,6 +518,21 @@ main {
   position:relative;
   top:1px;
 }
+
+.btn btn-primary {
+  background-color:#44c767;
+  border-radius:28px;
+  border:1px solid #18ab29;
+  display:inline-block;
+  cursor:pointer;
+  color:#ffffff;
+  font-family:Arial;
+  font-size:17px;
+  padding:16px 31px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #2f6627;
+}
+
 
 /* Dropdown Button */
 .dropbtn {

@@ -29,7 +29,8 @@ export class AuthService {
     return localStorage.getItem('token')
   }
 
+// Auth Guard function
   loggedIn() {
-    return !!localStorage.getItem('token')    
+    return !!localStorage.getItem('token')  // Double negat "!!" to return us a boolean value
   }
 }

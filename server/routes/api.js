@@ -2,7 +2,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const User = require('../models/user')
-
+const jwt = require('jsonwebtoken')
 
 
 
@@ -29,7 +29,9 @@ router.post("/register", (req, res) => {
     var user = new User(req.body); // video 8 this method might cause error
     user.save()
         .then(registeredUser => {
-            res.status(200).send(registeredUser)
+           let payload = { subject: registeredUser._id}
+           let token = jwt.sign(payload, 'secretKey') // Generating token
+            res.status(200).send({token}) // Sending token
         })
         .catch(err => {
             res.status(400).send(err);
@@ -51,7 +53,9 @@ router.post("/login", (req, res) => {
             if( user.password !== userData.password){
                 res.status(401).send('Invalid password')
             } else {
-                res.status(200).send(user)
+                let payload = { subject: user._id}
+                let token = jwt.sign(payload, 'secretKey') // Generating token
+                res.status(200).send({token}) // Sending token
             }
 
 

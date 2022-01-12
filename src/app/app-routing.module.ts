@@ -8,24 +8,26 @@ import {EventsComponent} from "./events/events.component";
 import {SpecialEventsComponent} from "./special-events/special-events.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
+import {AuthGuard} from "./auth.guard";
 
 const routes: Routes = [
 
   {
     path: '',
-    redirectTo: '/events',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   {
-    path: 'admin-dashboard',
-    component: AdminDashboardComponent
+    path: 'home-dashboard',
+    component: AdminDashboardComponent,
+    canActivate: [AuthGuard]  // When we go to the home dashboard the canActivate AuthGuard if true allows access, but if it is false then it restricts access to the system/tool
   },
   {
     path:'employee-dashboard',
     component: EmployeeDashboardComponent
   },
   {
-    path: 'admin-dashboard2',
+    path: 'admin-dashboard',
     component: AdminDashboard2Component
   },
   {

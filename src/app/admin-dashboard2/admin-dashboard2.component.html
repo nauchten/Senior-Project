@@ -175,10 +175,7 @@
 
 
 
-            <div class="card4">
 
-
-            </div>
           </div>
         </div>
       </div>
@@ -189,6 +186,46 @@
       <!-- Save button -->
       <a href="#" class="myButton">Save</a>
 
+      <div class="container-fluid">
+
+        <h1>What project did you work on?</h1>
+        <form #userForm="ngForm">
+
+
+          {{userForm.form.valid}}
+          <div class="form-group">
+          <label>Name</label>
+            <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name = "userName" [(ngModel)]="userModel.userName">
+          <small>Name is a required field</small>
+          </div>
+
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name = "Email" [(ngModel)]="userModel.Email">
+          </div>
+
+          <div class="form-group">
+            <label>Project ID:</label>
+            <select class="custom-select" name = "projectID" [(ngModel)]="userModel.projectID">
+              <option selected></option>
+              <option *ngFor="let id of id">{{ id }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Project Status:</label>
+            <select class="custom-select" name="projectStatus" [(ngModel)]="userModel.projectStatus">
+              <option selected></option>
+              <option *ngFor="let projectStatus of projectStatus">{{ projectStatus }}</option>
+            </select>
+          </div>
+
+          <button [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
+      </div>
+
       <!-- CHARTS ENDS HERE -->
     </div>
   </main>
@@ -198,7 +235,6 @@
       <div class="sidebar__img">
         <img src="assets/HumanaAppLogo.png"/>
         <h1>Humana Project Management Tool</h1>
-
 
 
       </div>
