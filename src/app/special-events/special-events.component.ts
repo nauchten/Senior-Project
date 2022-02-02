@@ -12,7 +12,10 @@ export class SpecialEventsComponent implements OnInit {
 
   specialEvents = []
 
-  constructor(private _eventService: EventService,
+    showNav = true;
+
+
+    constructor(private _eventService: EventService,
               private _router: Router) { }
 
 

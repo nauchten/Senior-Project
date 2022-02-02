@@ -1,25 +1,2 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-    <div class="sidebar__img">
-        <img src="assets/HumanaAppLogo.png" alt = "Humana" width="100px" height="71px"/>
-    <a class="navbar-brand" href="#">Humana Project Management Tool</a>
-
-    </div>
-
-
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-
-        </ul>
-        <ul class="navbar-nav">
-            <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/login" routerLinkActive="active">Login</a>
-            <a class="nav-link" *ngIf="!_authService.loggedIn()" routerLink="/register" routerLinkActive="active">Register</a>
-            <a class="nav-link" style="cursor:pointer" *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a>
-        </ul>
-    </div>
-</nav>
-<div class="container">
-    <router-outlet></router-outlet>
-</div>
+<router-outlet></router-outlet>
 

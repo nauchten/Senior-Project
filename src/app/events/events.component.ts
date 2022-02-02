@@ -8,6 +8,9 @@ import {EventService} from "../event.service";
 })
 export class EventsComponent implements OnInit {
 events = []
+
+  showNav = true;
+
   constructor(private _eventService: EventService) { }
 
   ngOnInit(): void {

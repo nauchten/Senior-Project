@@ -11,8 +11,11 @@ export class LoginComponent implements OnInit {
 
   loginUserData = {email: ' ', password: ' '};
 
-  constructor(private _auth: AuthService,
-              private _router: Router) { }
+  showNav = true;
+
+
+    constructor(private _auth: AuthService,
+              public _router: Router) { }
 
   ngOnInit(): void {
   }
@@ -22,7 +25,7 @@ export class LoginComponent implements OnInit {
         .subscribe(
             res => {
               localStorage.setItem('token', res.token)   // Storing in local storage
-              this._router.navigate(['/admin-dashboard'])
+              this._router.navigate(['/home-dashboard'])
             },
             err => console.log(err)
         )

@@ -1,3 +1,5 @@
+// A service that sends a token to the server
+
 import {Injectable, Injector} from '@angular/core';
 import {HttpHandler, HttpInterceptor, HttpRequest} from "@angular/common/http";
 import { AuthService } from './auth.service';

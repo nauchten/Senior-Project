@@ -44,123 +44,9 @@
       <!-- MAIN TITLE STARTS HERE -->
 
 
-      <!-- MAIN TITLE ENDS HERE -->
-      <div>
-        <p>What project did you work on?</p>
-      </div>
-      <!-- MAIN CARDS STARTS HERE -->
-      <div class="main__cards">
-        <div class="card">
-          <p class="text-primary-p">ID</p>
-
-
-          <div class="card_inner">
-            <span class="font-bold text-title"></span>
-
-            <select id="list2" onchange="getSelectValue();">
-              <option value="js">JavaScript</option>
-              <option value="php">PHP</option>
-              <option value="c#">Csharp</option>
-              <option value="java">Java</option>
-              <option value="node">Node.js</option>
-            </select>
-            <script>
-
-              function getSelectValue()
-              {
-                var selectedValue = document.getElementById("list2").value;
-                console.log(selectedValue);
-              }
-              getSelectValue();
-
-            </script>
-
-
-
-
-          </div>
-        </div>
-
-        <div class="card">
-          <p>Select new status</p>
-          <div>
-
-          </div>
-          <div class="card_inner">
-            <p class="text-primary-p">Status</p>
-            <span class="font-bold text-title"></span>
-            <select id="list" onchange="getSelectValue();">
-              <option value="js">JavaScript</option>
-              <option value="php">PHP</option>
-              <option value="c#">Csharp</option>
-              <option value="java">Java</option>
-              <option value="node">Node.js</option>
-            </select>
-            <script>
-
-              function getSelectValue()
-              {
-                var selectedValue = document.getElementById("list").value;
-                console.log(selectedValue);
-              }
-              getSelectValue();
-
-            </script>
-          </div>
-        </div>
-
-
-
-        <div class="card">
-
-          <div class="card_inner">
-            <div>
-              <p>New category?</p>
-            </div>
-            <p class="text-primary-p">Category</p>
-
-
-
-            <select id="list3" onchange="getSelectValue();">
-              <option value="js">JavaScript</option>
-              <option value="php">PHP</option>
-              <option value="c#">Csharp</option>
-              <option value="java">Java</option>
-              <option value="node">Node.js</option>
-            </select>
-            <script>
-
-              function getSelectValue()
-              {
-                var selectedValue = document.getElementById("list3").value;
-                console.log(selectedValue);
-              }
-              getSelectValue();
-
-            </script>
-
-          </div>
-        </div>
-      </div>
-      <!-- MAIN CARDS ENDS HERE -->
-
       <!-- CHARTS STARTS HERE -->
       <div class="charts">
-        <div class="charts__left">
-          <p>What did you do today?</p>
-          <p>&nbsp;&nbsp;</p>
-          <p>Notes:</p>
-          <p>&nbsp;&nbsp;</p>
-          <p>Code Updates:</p>
-          <p>&nbsp;&nbsp;</p>
-          <p>Meeting Notes:</p>
 
-
-
-
-
-          <div id="apex1"></div>
-        </div>
 
         <div class="charts__right">
           <div class="charts__right__title">
@@ -168,23 +54,64 @@
             </div>
           </div>
 
-          <div class="charts__right__cards">
 
-
-
-
-
-
-
-          </div>
         </div>
       </div>
 
       <div>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+
+
+        <h1>What project did you work on?</h1>
+        <form #userForm="ngForm">
+
+
+          {{userForm.form.valid}}
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name = "userName" [(ngModel)]="userModel.userName">
+            <small>Name is a required field</small>
+          </div>
+
+
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" name = "Email" [(ngModel)]="userModel.Email">
+          </div>
+
+          <div class="form-group">
+            <label>Project ID:</label>
+            <select class="custom-select" name = "projectID" [(ngModel)]="userModel.projectID">
+              <option selected></option>
+              <option *ngFor="let id of id">{{ id }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Project Status:</label>
+            <select class="custom-select" name="projectStatus" [(ngModel)]="userModel.projectStatus">
+              <option selected></option>
+              <option *ngFor="let projectStatus of projectStatus">{{ projectStatus }}</option>
+            </select>
+          </div>
+          <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+          <div class="form-group">
+            <body>
+            <label>Upload a File:</label>
+            <form action="/action_page.php">
+              <input type="file" id="myFile" name="filename">
+            </form>
+            </body>
+          </div>
+
+
+
+
+
+          <button [disabled]="userForm.form.invalid" class="btn btn-primary" type="submit">Submit</button>
+        </form>
+
       </div>
-      <!-- Save button -->
-      <a href="#" class="myButton">Save</a>
 
       <!-- CHARTS ENDS HERE -->
     </div>
@@ -193,11 +120,11 @@
   <div id="sidebar">
     <div class="sidebar__title">
       <div class="sidebar__img">
-        <img src="assets/HumanaAppLogo.png"/>
-        <h1>Humana Project Management Tool</h1>
-
-
-
+        <div class="site-header__logo">
+          <a href="home-dashboard" title="Humana" class="brand">
+            <img src="assets/HumanaAppLogo.png" alt="Humana" width="100px" height="71px"/>
+          </a>
+        </div>
       </div>
       <i
               onclick="closeSidebar()"
@@ -209,11 +136,9 @@
 
     <div class="sidebar__menu">
       <div class="sidebar__link active_menu_link">
-
-        <a href="admin-dashboard">Add Update For File</a>
       </div>
       <div class="sidebar__link">
-        <a href="employee-dashboard">Add New File</a>
+
       </div>
       <div class="sidebar__link">
         <a href="admin-dashboard2">Add New Request</a>

@@ -24,27 +24,25 @@
   <component name="ChangeListManager">
     <list default="true" id="8387522e-6676-40d5-b943-22d0a64c1ea2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard/admin-dashboard.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard/admin-dashboard.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard/admin-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard/admin-dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard/admin-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard/admin-dashboard.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/functions.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/event.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/event.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/events/events.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/events/events.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/special-events/special-events.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/special-events/special-events.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/token-interceptor.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/token-interceptor.service.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +134,11 @@
       <workItem from="1640733938703" duration="52000" />
       <workItem from="1640734043223" duration="108000" />
       <workItem from="1640735992167" duration="23308000" />
-      <workItem from="1641527006286" duration="10023000" />
+      <workItem from="1641527006286" duration="15467000" />
+      <workItem from="1642112041039" duration="1329000" />
+      <workItem from="1642377349704" duration="41000" />
+      <workItem from="1643323454960" duration="3725000" />
+      <workItem from="1643741032021" duration="5008000" />
     </task>
     <servers />
   </component>
@@ -168,10 +170,10 @@
       <screen x="0" y="23" width="1440" height="804" />
     </state>
     <state x="0" y="23" key="FileDocumentManager.FileCacheConflict/0.23.1440.804@0.23.1440.804" timestamp="1639630655373" />
-    <state x="362" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1641949280191">
+    <state x="362" y="151" width="670" height="676" key="search.everywhere.popup" timestamp="1642051704149">
       <screen x="0" y="23" width="1440" height="804" />
     </state>
-    <state x="362" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1641949280191" />
+    <state x="362" y="151" width="670" height="676" key="search.everywhere.popup/0.23.1440.804@0.23.1440.804" timestamp="1642051704149" />
     <state x="362" y="151" width="670" height="678" key="search.everywhere.popup/0.23.1440.806@0.23.1440.806" timestamp="1641184219121" />
   </component>
 </project>

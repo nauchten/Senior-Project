@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {User} from "../user";
+import { AuthService } from '../auth.service';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-admin-dashboard2',
@@ -14,7 +16,11 @@ export class AdminDashboard2Component implements OnInit {
 
   userModel = new User('Mollie Madison','MollieM@humana.org', '1','Completed');
 
-  constructor() { }
+
+  showNav = true;
+
+  constructor(private _auth: AuthService,
+              private _router: Router) { }
 
   ngOnInit(): void {
   }

@@ -20,7 +20,7 @@ const routes: Routes = [
   {
     path: 'home-dashboard',
     component: AdminDashboardComponent,
-    canActivate: [AuthGuard]  // When we go to the home dashboard the canActivate AuthGuard if true allows access, but if it is false then it restricts access to the system/tool
+  //  canActivate: [AuthGuard]  // When we go to the home dashboard the canActivate AuthGuard if true allows access, but if it is false then it restricts access to the system/tool
   },
   {
     path:'employee-dashboard',

@@ -10,7 +10,7 @@ const api = require('./routes/api')
 //app.use('/api', api)
 
 app.get('/', function(req,res){
-    res.send('Hello from server')
+    res.send('This is the Humana server running in the background')
 })
 
 app.listen(PORT,function(){
