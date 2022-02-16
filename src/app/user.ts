@@ -4,7 +4,7 @@ export class User {
         public Email: string,
         public projectID: string,
         public projectStatus: string,
-
-
+        public Department: string,
+        public Priority: string,
     ) {}
 }

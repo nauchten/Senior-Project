@@ -17,7 +17,7 @@ import { AuthService } from './auth.service';
 import {EventService} from "./event.service";
 import {AuthGuard} from "./auth.guard";
 import {TokenInterceptorService} from "./token-interceptor.service";
-
+import { HttpClient} from "@angular/common/http";
 
 @NgModule({
   declarations: [

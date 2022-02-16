@@ -19,7 +19,6 @@
       <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <div class="navbar__left">
-      <a href="employee-dashboard">Department</a>
       <div class="dropdown">
         <button class="dropbtn">Priority</button>
         <div class="dropdown-content">
@@ -63,10 +62,10 @@
 
 
         <h1>What project did you work on?</h1>
-        <form #userForm="ngForm">
-
-
-          {{userForm.form.valid}}
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          {{errorMessage}}
+        </div>
+        <form #userForm="ngForm" *ngIf = "!submitted"(ngSubmit) = "onSubmit()"novalidate>
           <div class="form-group">
             <label>Name</label>
             <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name = "userName" [(ngModel)]="userModel.userName">
@@ -149,6 +148,8 @@
       <div class="sidebar__link">
         <a href="admin-dashboard2">Category Change or Update</a>
       </div>
+
+
     </div>
   </div>
 </div>
