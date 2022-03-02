@@ -19,14 +19,7 @@
       <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <div class="navbar__left">
-      <div class="dropdown">
-        <button class="dropbtn">Priority</button>
-        <div class="dropdown-content">
-          <a href="dd">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="admin-dashboard2">Link 3</a>
-        </div>
-      </div>
+
     </div>
     <div class="navbar__right">
 
@@ -44,28 +37,12 @@
 
 
       <!-- CHARTS STARTS HERE -->
-      <div class="charts">
-
-
-        <div class="charts__right">
-          <div class="charts__right__title">
-            <div>
-            </div>
-          </div>
-
-
-        </div>
-      </div>
 
       <div>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 
+        <h1>Employee Portal</h1>
 
-        <h1>What project did you work on?</h1>
-        <div class="alert alert-danger" *ngIf="errorMessage">
-          {{errorMessage}}
-        </div>
-        <form #userForm="ngForm" *ngIf = "!submitted"(ngSubmit) = "onSubmit()"novalidate>
+        <form #userForm="ngForm" (ngSubmit) = "onSubmit()"novalidate>
           <div class="form-group">
             <label>Name</label>
             <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name = "userName" [(ngModel)]="userModel.userName">
@@ -79,15 +56,25 @@
           </div>
 
           <div class="form-group">
-            <label>Project ID:</label>
+            <label>Project ID</label>
             <select class="custom-select" name = "projectID" [(ngModel)]="userModel.projectID">
               <option selected></option>
               <option *ngFor="let id of id">{{ id }}</option>
             </select>
           </div>
 
+
           <div class="form-group">
-            <label>Project Status:</label>
+            <label>Department</label>
+            <select class="custom-select" name = "Department" [(ngModel)]="userModel.Department">
+              <option selected></option>
+              <option selected></option>
+              <option *ngFor="let Department of Department">{{ Department }}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Project Status</label>
             <select class="custom-select" name="projectStatus" [(ngModel)]="userModel.projectStatus">
               <option selected></option>
               <option *ngFor="let projectStatus of projectStatus">{{ projectStatus }}</option>
@@ -139,15 +126,8 @@
       <div class="sidebar__link">
 
       </div>
-      <div class="sidebar__link">
-        <a href="admin-dashboard2">Add New Request</a>
-      </div>
-      <div class="sidebar__link">
-        <a href="admin-dashboard2">Status Update</a>
-      </div>
-      <div class="sidebar__link">
-        <a href="admin-dashboard2">Category Change or Update</a>
-      </div>
+
+
 
 
     </div>

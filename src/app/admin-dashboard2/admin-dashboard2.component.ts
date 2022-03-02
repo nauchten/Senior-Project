@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {User} from "../user";
 import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
@@ -19,25 +19,46 @@ export class AdminDashboard2Component implements OnInit {
   Priority = [ 'High', 'Medium', 'Low']
   userModel = new User('Mollie Madison','MollieM@humana.org', '1','Completed', 'Information Technology', 'High' );
 
-//  submitted = false;
-//  errorMessage = '';
+
+  userForm:FormGroup;
+  listData:any;
 
   showNav = true;
 
   constructor(private _auth: AuthService, private _submitbuttonService: SubmitbuttonService,
-              private _router: Router) { }
+              private _router: Router, private fb:FormBuilder  ) {
 
-  ngOnInit(): void {
+    this.listData = [];
+
+    this.userForm = this.fb.group({
+      name : ['', Validators.required],
+      address : ['', Validators.required],
+      ContactNo: ['', Validators.required],
+      gender: ['', Validators.required]
+    })
+
   }
 
-  onSubmit() { // Front end side of form submission
-    console.log(this.userModel);
-  //   this.submitted = true; // Hides form after a user submits it
-  //   this._submitbuttonService.formData(this.userModel)
-  //       .subscribe(
-    //         data => console.log('Form data submitted!', data),
-    //         error => this.errorMessage = error.statusText
-       //  )
+  addItem(){
+    this.listData.push(this.userForm.value);
+    this.userForm.reset();
+  }
+  reset(){
+    this.userForm.reset();
+  }
+
+  removeItems(element:any){
+    this.listData.forEach((value:any,dex:any) => {
+      if(value == element){
+        this.listData.splice(dex,1)
+      }
+
+    });
+
+
+  }
+
+  ngOnInit(): void {
   }
 
 
