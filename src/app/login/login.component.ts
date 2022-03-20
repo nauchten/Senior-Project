@@ -9,7 +9,7 @@ import { Router } from '@angular/router'
 })
 export class LoginComponent implements OnInit {
 
-  loginUserData = {email: ' ', password: ' '};
+  loginUserData = {email: ' ', password: ' '}; // User data object to hold the user's data
 
   showNav = true;
 

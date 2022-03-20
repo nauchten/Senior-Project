@@ -6,8 +6,8 @@ import { Router } from '@angular/router'
 @NgModule()
 export class AuthService {
 
-  private _registerUrl = "http://localhost:3000/api/register";
-  private _loginUrl = "http://localhost:3000/api/login";
+  private _registerUrl = "http://localhost:3000/api/register"; // Backend server api path
+  private _loginUrl = "http://localhost:3000/api/login"; // Backend server api path
 
   constructor(private http: HttpClient,
               private _router: Router) { }
@@ -22,7 +22,7 @@ export class AuthService {
 
   logoutUser() {
     localStorage.removeItem('token')
-    this._router.navigate(['/events'])
+    this._router.navigate(['/login'])
   }
 
   getToken() {

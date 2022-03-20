@@ -1,0 +1,15 @@
+{
+  "Users": [
+    {
+      "name": "Hollie Madison",
+      "email": "HollieM@humana.org",
+      "admin": "yes"
+    },
+    {
+      "name": "Joe Smith",
+      "email": "JoeS@humana.org",
+      "admin": "no"
+    }
+  ]
+
+}

@@ -1,3 +1,5 @@
+// Old user model. Don't use
+
 export class User {
     constructor(
         public userName: string,

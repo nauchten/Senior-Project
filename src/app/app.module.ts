@@ -18,6 +18,10 @@ import {EventService} from "./event.service";
 import {AuthGuard} from "./auth.guard";
 import {TokenInterceptorService} from "./token-interceptor.service";
 import { HttpClient} from "@angular/common/http";
+import { EmployeesComponent } from './employees/employees.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
+import {Ng2OrderModule} from "ng2-order-pipe";
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { HttpClient} from "@angular/common/http";
     RegisterComponent,
     EventsComponent,
     SpecialEventsComponent,
-    LoginComponent
+    LoginComponent,
+    EmployeesComponent
   ],
   imports: [
     AppRoutingModule,
@@ -39,8 +44,9 @@ import { HttpClient} from "@angular/common/http";
     NgSelectModule,
     HttpClientModule,
     AuthService,
-
-
+    Ng2SearchPipeModule,
+    Ng2OrderModule,
+    NgxPaginationModule
 
   ],
   providers: [AuthService, AuthGuard, EventService, {

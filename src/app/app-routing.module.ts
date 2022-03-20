@@ -8,6 +8,7 @@ import {EventsComponent} from "./events/events.component";
 import {SpecialEventsComponent} from "./special-events/special-events.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
+import {EmployeesComponent} from "./employees/employees.component";
 import {AuthGuard} from "./auth.guard";
 
 const routes: Routes = [
@@ -16,6 +17,10 @@ const routes: Routes = [
     path: '',
     redirectTo: '/login',
     pathMatch: 'full'
+  },
+  {
+    path: 'admin',
+    loadChildren: '../app/admins/admins.module#Admins'
   },
   {
     path: 'home-dashboard',

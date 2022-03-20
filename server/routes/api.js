@@ -6,9 +6,9 @@ const jwt = require('jsonwebtoken')
 
 
 
-const db = "mongodb+srv://HollieMadison:Molly12345!@cluster0.bxsbc.mongodb.net/employeedb?retryWrites=true&w=majority"
+const db = "mongodb+srv://HollieMadison:Molly12345!@cluster0.bxsbc.mongodb.net/employeedb?retryWrites=true&w=majority" // Our MongoDB database
 
-mongoose.connect(db, err => {
+mongoose.connect(db, err => { // Connects to the database
 
     if (err) {
         console.error('Error!' + err)
@@ -21,9 +21,7 @@ mongoose.connect(db, err => {
 
 
 const router = express.Router();
-//router.get('/', (req,res) => {
-//  res.send('From API route')
-//})
+
 
 router.post("/register", (req, res) => {
     var user = new User(req.body); // video 8 this method might cause error
@@ -66,93 +64,6 @@ router.post("/api/login", (req, res) => {
 
 });
 
-
-router.get("/events", (req, res) => {
-
-    let events = [
-        {
-            "_id": "1",
-            "name": "Auto Expo",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "2",
-            "name": "Auto Expo",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "3",
-            "name": "Auto Expo",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "4",
-            "name": "Auto Expo",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "5",
-            "name": "Auto Expo",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "6",
-            "name": "Auto Expo",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        }
-    ]
-    res.json(events)
-
-});
-
-
-router.get('/special',(req, res) => {
-    let specialEvents = [
-        {
-            "_id": "1",
-            "name": "Auto Expo Special",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "2",
-            "name": "Auto Expo Special",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "3",
-            "name": "Auto Expo Special",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "4",
-            "name": "Auto Expo Special",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "5",
-            "name": "Auto Expo Special",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        },
-        {
-            "_id": "6",
-            "name": "Auto Expo Special",
-            "description": "lorem ipsum",
-            "date": "2012-04-23T18:25:43.511Z"
-        }
-    ]
-    res.json(specialEvents)
-});
 
 module.exports = router
 

@@ -40,13 +40,12 @@
 
       <div>
 
-        <h1>Employee Portal</h1>
+        <h1>Employee Dashboard</h1>
 
         <form #userForm="ngForm" (ngSubmit) = "onSubmit()"novalidate>
           <div class="form-group">
             <label>Name</label>
             <input type="text" required #name="ngModel" [class.is-invalid]="name.invalid && name.touched" class="form-control" name = "userName" [(ngModel)]="userModel.userName">
-            <small>Name is a required field</small>
           </div>
 
 
