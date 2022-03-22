@@ -11,11 +11,11 @@ import { SubmitbuttonService} from "../submitbutton.service";
 })
 export class EmployeeDashboardComponent implements OnInit {
 
-  id = ['1', '2', '3'];  // Array for id
+  id = ['1', '2', '3', '4', '5', '6', '7'];  // Array for id
   projectStatus= ['Completed', 'Pending', 'Not Yet Begun'];  // Array for the project status
-  Department = ['Information Technology, Pharmacy'];
+  Department = ['Information Technology', 'Pharmacy', 'Development', 'Sales'];
 
-  userModel = new User('Joe Smith','JoeS@humana.org', '1','Completed', 'Pharmacy', 'Low');
+  userModel = new User('','', '1','Completed', 'Pharmacy', 'Low');
 
   submitted = false;
   errorMessage = '';

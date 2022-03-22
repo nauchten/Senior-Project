@@ -7,6 +7,8 @@ import { HttpClient} from "@angular/common/http";
 import { SubmitbuttonService} from "../submitbutton.service";
 import {Users} from "../users";
 import {RestService} from "../rest.service";
+import {Usersinterface} from "../usersinterface";
+import {HttpClientModule} from "@angular/common/http";
 
 @Component({
   selector: 'app-admin-dashboard2',
@@ -14,14 +16,9 @@ import {RestService} from "../rest.service";
   styleUrls: ['./admin-dashboard2.component.css']
 })
 export class AdminDashboard2Component implements OnInit {
-  users: Users[] = [];
+     users: Usersinterface[] = [];
 
- id = ['1', '2', '3'];  // Array for id
- projectStatus= ['Completed', 'Pending', 'Not Yet Begun'];  // Array for the project status
-  Department = ['Information Technology', 'Pharmacy'];
- Priority = [ 'High', 'Medium', 'Low']
- userModel = new User('Hollie Madison','HollieM@humana.org', '1','Completed', 'Information Technology', 'High' );
-
+  //  users: Usersinterface[];
 
   userForm:FormGroup;
   listData:any;
@@ -30,21 +27,23 @@ export class AdminDashboard2Component implements OnInit {
 
   name: any;
 
+  EditRowID: any = '';
+
+
   constructor(private _auth: AuthService, private _submitbuttonService: SubmitbuttonService,
-              private _router: Router, private fb:FormBuilder, public rs: RestService) {
+              private _router: Router, private fb:FormBuilder, public rs: RestService, private httpClient: HttpClient) {
+
 
     this.listData = [];
 
 
-
-
-
-
     this.userForm = this.fb.group({
-      name : ['', Validators.required],
-      address : ['', Validators.required],
-      ContactNo: ['', Validators.required],
-      gender: ['', Validators.required]
+        Name : ['', Validators.required],
+        Email : ['', Validators.required],
+        ProjectID: ['', Validators.required],
+        Department: ['', Validators.required],
+        ProjectStatus: ['', Validators.required],
+        ActiveProject: ['', Validators.required]
     })
 
   }
@@ -53,11 +52,13 @@ export class AdminDashboard2Component implements OnInit {
     this.listData.push(this.userForm.value);
     this.userForm.reset();
   }
- // reset(){ // Resets item on table
- //   this.userForm.reset();
-  // }
 
-  edit(){
+
+  edit(){ // Edits the table
+
+  }
+
+  ShowActiveProjects(){ // Shows the active projects currently going on
 
   }
 
@@ -76,6 +77,9 @@ export class AdminDashboard2Component implements OnInit {
     this.users=response;
     });
 
+    this.httpClient.get('src/assets/db.json').subscribe()
+
+
   }
 
   Search(){
@@ -87,4 +91,6 @@ export class AdminDashboard2Component implements OnInit {
           });
       }
   }
+
+
 }

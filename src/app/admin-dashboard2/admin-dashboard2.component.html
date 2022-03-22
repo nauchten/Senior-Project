@@ -36,7 +36,17 @@
 
       <div>
 <h1>Admin Dashboard</h1>
+        &nbsp;
+        &nbsp;
+        &nbsp;
+        <div>
+        <button type="button" class="btn btn-primary" (click)="addItem()">Show Active Projects</button>
+        </div>
+        &nbsp;
+        &nbsp;
+        &nbsp;
         <nav class="navbar">
+          <label>Search bar</label>
           <input class="form-control" type = "text" name ="name" [(ngModel)] = "name" (ngModelChange)="Search()"
                  placeholder="Search">
         </nav>
@@ -49,7 +59,7 @@
                 </div>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" formControlName="name" class="form-control" placeholder="Name">
+                    <input type="text" formControlName="Name" class="form-control" placeholder="Name">
                   </div>
                 </div>
               </div>
@@ -59,7 +69,7 @@
                 </div>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" formControlName="address" class="form-control" placeholder="Email">
+                    <input type="text" formControlName="Email" class="form-control" placeholder="Email">
                   </div>
                 </div>
               </div>
@@ -69,7 +79,7 @@
                 </div>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" formControlName="ContactNo" class="form-control" placeholder="Project ID">
+                    <input type="text" formControlName="ProjectID" class="form-control" placeholder="Project ID">
                   </div>
                 </div>
               </div>
@@ -79,7 +89,27 @@
                 </div>
                 <div class="form-row">
                   <div class="col">
-                    <input type="text" formControlName="gender" class="form-control" placeholder="Department">
+                    <input type="text" formControlName="Department" class="form-control" placeholder="Department">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label > Project Status </label>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" formControlName="ProjectStatus" class="form-control" placeholder="Project Status">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label > Active Project </label>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" formControlName="ActiveProject" class="form-control" placeholder="Is this an active project?">
                   </div>
                 </div>
               </div>
@@ -97,28 +127,33 @@
             <thead>
             <tr>
               <th>Name</th>
-              <th>Address</th>
+              <th>Email</th>
               <th>Project ID</th>
               <th>Department</th>
               <th>Project Status</th>
-              <th>Action</th>
+              <th>Active</th>
+
             </tr>
             </thead>
             <tbody>
             <tr *ngFor = "let item of listData">
-              <td>{{item.name}}</td>
-              <td>{{item.address}}</td>
-              <td>{{item.ContactNo}}</td>
-              <td>{{item.gender}}</td>
-              <td><button type="button" class="btn btn-primary" (click)="removeItems(item)">Remove</button></td>
-            </tr>
+              <td>{{item.Name}}</td>
+              <td>{{item.Email}}</td>
+              <td>{{item.ProjectID}}</td>
+              <td>{{item.Department}}</td>
+              <td>{{item.ProjectStatus}}</td>
+              <td>{{item.ActiveProject}}</td>
+              <td></td>
+              <th>
+                <button type="button" class="btn btn-primary" (click)="removeItems(item)">Remove</button>
+                <button type="button" class="btn btn-primary" (click)="addItem()">Edit</button> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp;    &nbsp; &nbsp;
+              </th>
             </tbody>
           </table>
         </div>
 
       </div>
 
-      <!-- CHARTS ENDS HERE -->
     </div>
   </main>
 
@@ -146,15 +181,9 @@
 
       </div>
 
-
-
-
     </div>
   </div>
 </div>
-
-
 </body>
-
 </html>
 <router-outlet></router-outlet>
