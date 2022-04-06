@@ -29,8 +29,11 @@ export class AdminDashboard2Component implements OnInit {
 
   EditRowID: any = '';
 
+  Selectedrow:null;
 
-  constructor(private _auth: AuthService, private _submitbuttonService: SubmitbuttonService,
+
+
+    constructor(private _auth: AuthService, private _submitbuttonService: SubmitbuttonService,
               private _router: Router, private fb:FormBuilder, public rs: RestService, private httpClient: HttpClient) {
 
 
@@ -77,7 +80,6 @@ export class AdminDashboard2Component implements OnInit {
     this.users=response;
     });
 
-    this.httpClient.get('src/assets/db.json').subscribe()
 
 
   }

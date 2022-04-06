@@ -24,11 +24,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8387522e-6676-40d5-b943-22d0a64c1ea2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/db.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/admin-dashboard2/admin-dashboard2.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/employee-dashboard/employee-dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/register/register.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/register/register.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +142,8 @@
       <workItem from="1646161142703" duration="3898000" />
       <workItem from="1646767418040" duration="2461000" />
       <workItem from="1647300109607" duration="3872000" />
-      <workItem from="1647368043296" duration="16799000" />
+      <workItem from="1647368043296" duration="21467000" />
+      <workItem from="1649173698761" duration="4966000" />
     </task>
     <servers />
   </component>

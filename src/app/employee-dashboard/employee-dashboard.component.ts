@@ -11,6 +11,8 @@ import { SubmitbuttonService} from "../submitbutton.service";
 })
 export class EmployeeDashboardComponent implements OnInit {
 
+  alert:boolean=false
+
   id = ['1', '2', '3', '4', '5', '6', '7'];  // Array for id
   projectStatus= ['Completed', 'Pending', 'Not Yet Begun'];  // Array for the project status
   Department = ['Information Technology', 'Pharmacy', 'Development', 'Sales'];
@@ -26,6 +28,10 @@ export class EmployeeDashboardComponent implements OnInit {
               private _router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  alertMessage() {
+    this.alert = true
   }
 
   onSubmit() { // Front end side of form submission

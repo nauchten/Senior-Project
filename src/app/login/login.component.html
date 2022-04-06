@@ -23,15 +23,22 @@
                             <label>Password</label>
                             <input type="password" class="form-control rounded-0" [(ngModel)]="loginUserData.password" name="password" required>
                         </div>
-                        <a class="btn btn-success float-right" href="home-dashboard">Login</a>
+                        <a (click)="alertMessage()" class="btn btn-success float-right" href="home-dashboard">Login</a>
                         <a class="btn btn-success float-left" href="register">New user</a>
-
                     </form>
 
                 </div>
                 <!--/card-block-->
             </div>
             <!-- /form card login -->
+
+            <div *ngIf = "alert" class="alert alert-success alert-dismissible fade show" role="alert">
+                <strong>Success!</strong> You have been registered.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+
+                </button>
+            </div>
+
 
         </div>
 
