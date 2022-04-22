@@ -1,6 +1,0 @@
-Notes for meeting on 9/7/2021- cap - call started at 8:00 pm ended at 9:00 pm
-figue out what base they use to code on. 
-Figure out IDE for what they compatable with it.
-Maybe use Angular to build a base. 
-Use HTML to show it and then use JavaScript to make it work properly.
-Figure out what fields they need to build the project.
