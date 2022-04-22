@@ -46,7 +46,8 @@ export class AdminDashboard2Component implements OnInit {
         ProjectID: ['', Validators.required],
         Department: ['', Validators.required],
         ProjectStatus: ['', Validators.required],
-        ActiveProject: ['', Validators.required]
+        ActiveProject: ['', Validators.required],
+        Priority: ['', Validators.required]
     })
 
   }

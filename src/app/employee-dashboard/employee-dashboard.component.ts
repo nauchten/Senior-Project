@@ -15,9 +15,10 @@ export class EmployeeDashboardComponent implements OnInit {
 
   id = ['1', '2', '3', '4', '5', '6', '7'];  // Array for id
   projectStatus= ['Completed', 'Pending', 'Not Yet Begun'];  // Array for the project status
-  Department = ['Information Technology', 'Pharmacy', 'Development', 'Sales'];
+  Department = ['Information Technology', 'Pharmacy', 'Development', 'Sales', 'Marketing'];
+  priority = ['High', 'Medium', 'Low'];
 
-  userModel = new User('','', '1','Completed', 'Pharmacy', 'Low');
+  userModel = new User('','', '','', '', '');
 
   submitted = false;
   errorMessage = '';
@@ -36,13 +37,12 @@ export class EmployeeDashboardComponent implements OnInit {
 
   onSubmit() { // Front end side of form submission
     console.log(this.userModel); // Displays form JSON data
-    this.submitted = true; // Hides form after a user submits it
-    this._submitbuttonService.formData(this.userModel)
+ this.submitted = true; // Hides form after a user submits it
+   this._submitbuttonService.formData(this.userModel)
         .subscribe(
             data => console.log('Form data submitted!', data),
-            error => this.errorMessage = error.statusText
-
-  )
+           error => this.errorMessage = error.statusText
+        )
 
   }
 

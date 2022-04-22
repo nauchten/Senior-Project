@@ -22,6 +22,10 @@ import { EmployeesComponent } from './employees/employees.component';
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import {Ng2OrderModule} from "ng2-order-pipe";
 import {NgxPaginationModule} from "ngx-pagination";
+import { FlexmonsterPivotModule} from "ng-flexmonster";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule} from "@angular/material/button";
+
 
 @NgModule({
   declarations: [
@@ -33,7 +37,7 @@ import {NgxPaginationModule} from "ngx-pagination";
     EventsComponent,
     SpecialEventsComponent,
     LoginComponent,
-    EmployeesComponent
+    EmployeesComponent,
   ],
   imports: [
     AppRoutingModule,
@@ -46,7 +50,11 @@ import {NgxPaginationModule} from "ngx-pagination";
     AuthService,
     Ng2SearchPipeModule,
     Ng2OrderModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FlexmonsterPivotModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+
 
   ],
   providers: [AuthService, AuthGuard, EventService, {

@@ -8,6 +8,7 @@ import {EventsComponent} from "./events/events.component";
 import {SpecialEventsComponent} from "./special-events/special-events.component";
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
+import {ReportsComponent} from "./reports/reports.component";
 import {EmployeesComponent} from "./employees/employees.component";
 import {AuthGuard} from "./auth.guard";
 
@@ -50,6 +51,11 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+
+  {
+    path: 'reports',
+    component: ReportsComponent
   }
 
 ];

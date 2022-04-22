@@ -9,7 +9,7 @@
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
     crossorigin="anonymous"
   />
-  <title>DASHBOARD</title>
+  <title>Humana Project Management Tool</title>
 </head>
 
 <body id="body">
@@ -20,7 +20,10 @@
     </div>
     <div class="navbar__left">
       <a href="employee-dashboard">Employee Dashboard</a>
-      <a class="active_link" href="admin-dashboard">Admin Dashboard</a>
+      <a href="admin-dashboard">Admin Dashboard</a>
+      <a routerLink="/reports">Reports</a>
+
+
     </div>
     <div class="navbar__right">
 
@@ -76,6 +79,10 @@
       </div>
       <div class="sidebar__link">
         <a href="admin-dashboard">Admin Dashboard</a>
+      </div>
+
+      <div class="sidebar__link">
+        <a routerLink="/reports">Reports</a>
       </div>
 
       <div class="sidebar__logout">

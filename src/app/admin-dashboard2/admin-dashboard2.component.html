@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-    crossorigin="anonymous"
+          rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+          crossorigin="anonymous"
   />
   <title>Humana Project Management Tool</title>
 </head>
@@ -19,6 +19,10 @@
       <i class="fa fa-bars" aria-hidden="true"></i>
     </div>
     <div class="navbar__left">
+      <a href="employee-dashboard">Employee Dashboard</a>
+      <a href="admin-dashboard">Admin Dashboard</a>
+      <a routerLink="/reports">Reports</a>
+
 
     </div>
     <div class="navbar__right">
@@ -35,21 +39,19 @@
     <div class="main__container">
 
       <div>
-<h1>Admin Dashboard</h1>
+        <h1>Admin Dashboard</h1>
         &nbsp;
         &nbsp;
         &nbsp;
         <div>
-        <button type="button" class="btn btn-primary" (click)="addItem()">Show Active Projects</button>
+          <button type="button" class="btn btn-primary" (click)="addItem()">Show Active Projects</button>
         </div>
         &nbsp;
         &nbsp;
         &nbsp;
-        <nav class="navbar">
-          <label>Search bar</label>
-          <input class="form-control" type = "text" name ="name" [(ngModel)] = "name" (ngModelChange)="Search()"
-                 placeholder="Search">
-        </nav>
+        <div>
+          <input type="text" placeholder="Search..">
+        </div>
         <form [formGroup]="userForm">
           <div class="mt-5">
             <div class="form-row">
@@ -95,6 +97,16 @@
               </div>
               <div class="col-md-12">
                 <div class="form-group">
+                  <label > Priority </label>
+                </div>
+                <div class="form-row">
+                  <div class="col">
+                    <input type="text" formControlName="Priority" class="form-control" placeholder="Priority">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
                   <label > Project Status </label>
                 </div>
                 <div class="form-row">
@@ -130,6 +142,7 @@
               <th>Email</th>
               <th>Project ID</th>
               <th>Department</th>
+              <th>Priority</th>
               <th>Project Status</th>
               <th>Active</th>
 
@@ -141,6 +154,7 @@
               <td>{{item.Email}}</td>
               <td>{{item.ProjectID}}</td>
               <td>{{item.Department}}</td>
+              <td>{{item.Priority}}</td>
               <td>{{item.ProjectStatus}}</td>
               <td>{{item.ActiveProject}}</td>
               <td></td>
@@ -167,10 +181,10 @@
         </div>
       </div>
       <i
-        onclick="closeSidebar()"
-        class="fa fa-times"
-        id="sidebarIcon"
-        aria-hidden="true"
+              onclick="closeSidebar()"
+              class="fa fa-times"
+              id="sidebarIcon"
+              aria-hidden="true"
       ></i>
     </div>
 
